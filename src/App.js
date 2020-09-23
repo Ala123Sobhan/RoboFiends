@@ -24,7 +24,6 @@ class App extends Component {
     return (
       <div className="tc">
         <h1>Hi! Meet My RoboFriends!!</h1>
-        <p>They are really fun to be with. They can't wait to be with you!</p>
         <SearchBox searchChange={this.onSearchChange} />
         <CardList robots={filteredRobots} />;
       </div>
