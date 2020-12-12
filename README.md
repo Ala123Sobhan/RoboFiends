@@ -1,3 +1,7 @@
+<img src ="src/RoboFrds1.png">
+
+<img src="src/Robofrds2.png">
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
