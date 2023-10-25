@@ -20,7 +20,7 @@ frontend:
     postTest:
       commands:
         - npx mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json
-        - pm2 kill
+        # - pm2 kill
   artifacts:
     baseDirectory: build
     files:
@@ -30,3 +30,4 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+      - ~/.cache/Cypress
