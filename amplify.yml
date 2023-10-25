@@ -33,7 +33,6 @@ test:
         - "npx wait-on http://localhost:3000"
     test:
       commands:
-        - npm cypress install
         - npx cypress install
         - npx cypress run
     postTest:
