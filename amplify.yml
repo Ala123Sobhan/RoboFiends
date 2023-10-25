@@ -34,7 +34,7 @@ test:
     test:
       commands:
         - npx cypress install
-        - npx run test -- --reporter mochawesome
+        - npx cypress run test
     postTest:
       commands:
         - npx pm2 kill

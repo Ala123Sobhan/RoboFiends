@@ -7,7 +7,7 @@ describe("first test suite", function () {
     cy.visit("http://localhost:3000");
 
     cy.get("div[class='tc'] h1").then(function (title) {
-      expect(title).to.have.text("Hey! Meet My RoboFriends!!h");
+      expect(title).to.have.text("Hey! Meet My RoboFriends!!");
     });
   });
 });
