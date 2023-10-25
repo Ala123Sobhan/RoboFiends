@@ -34,4 +34,4 @@ describe("second test suite", function () {
 
 //burpsuite, fiddler - intercept
 //modify/mock response data/request to intercept & check security bugs in application
-//trigger a build
+//trigger another build
