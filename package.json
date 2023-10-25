@@ -8,14 +8,18 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^5.0.1",
     "tachyons": "^4.12.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test": "node_modules\\.bin\\cypress run",
+    "chromeTest": "npm run test -- --browser chrome",
+    "headedTest": "npm run test -- --headed",
+    "recordDashboardTest": "npm run test -- --record --key 207ca353-1e88-4962-ae60-a7d18d659a1b",
+    "mochareportTest": "npm run test -- --reporter mochawesome"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +35,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^13.3.3",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.6.1",
+    "mocha": "^10.2.0",
+    "neat-csv": "^5.1.0"
   }
 }
