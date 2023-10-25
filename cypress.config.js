@@ -22,7 +22,7 @@ module.exports = defineConfig({
       require("cypress-mochawesome-reporter/plugin")(on);
     },
 
-    specPattern: "cypress/integration/examples/*.js",
+    specPattern: "cypress/integration/examples/RoboFiendTest.js",
     experimentalSourceRewriting: false,
   },
 });

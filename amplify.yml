@@ -35,8 +35,6 @@ test:
       commands:
         - npm cypress install
         - npx cypress install
-        - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
-    postTest:
+        - npx cypress run
       commands:
-        - npx mochawesome-merge cypress/report/mochawesome-report/*.json -o cypress/report/mochawesome.json
         - npx pm2 kill
