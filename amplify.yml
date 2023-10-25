@@ -36,5 +36,6 @@ test:
         - npm cypress install
         - npx cypress install
         - npx cypress run
+    postTest:
       commands:
         - npx pm2 kill
