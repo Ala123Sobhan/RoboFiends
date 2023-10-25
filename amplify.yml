@@ -14,6 +14,8 @@ frontend:
         - npm run build
     test:
       commands:
+        - npm cypress install
+        - npx cypress install
         - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/report/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
     postTest:
       commands:
