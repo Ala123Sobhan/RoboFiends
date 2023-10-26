@@ -24,3 +24,4 @@ describe("first test suite", function () {
 //non cypress command like text() cant resolve promise by themselves, need to be handled
 
 //for iframe - install - npm install -D cypress-iframe
+//checking env setting for USER_DISABLE_TESTS in amplify on fix branch
