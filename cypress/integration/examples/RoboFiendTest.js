@@ -9,6 +9,9 @@ describe("first test suite", function () {
     cy.get("div[class='tc'] h1").then(function (title) {
       expect(title).to.have.text("Hey! Meet My RoboFriends!!");
     });
+
+    cy.get("input[placeholder='search robots']").type("Ervin");
+    cy.get(".bg-light-blue").should("have.length", 1);
   });
 });
 
