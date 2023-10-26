@@ -3,10 +3,10 @@ frontend:
   phases:
     preBuild:
       commands:
-        - yarn install
+        - npm install
     build:
       commands:
-        - yarn run build
+        - npm run build
   artifacts:
     # IMPORTANT - Please verify your build output directory
     baseDirectory: build
@@ -25,17 +25,16 @@ test:
   phases:
     preTest:
       commands:
-        - yarn install
-        - yarn global add wait-on
-        - yarn global add pm2
-        - yarn global add mocha mochawesome mochawesome-merge mochawesome-report-generator
-        - pm2 start npm -- start
-        - "wait-on http://localhost:3000"
+        - npm install
+        - npm install wait-on
+        - npm install pm2
+        - npm install mocha mochawesome mochawesome-merge mochawesome-report-generator
+        - npx pm2 start npm -- start
+        - "npx wait-on http://localhost:3000"
     test:
       commands:
-        - yarn global add cypress
-        - cypress install
-        - cypress run test --record --key 207ca353-1e88-4962-ae60-a7d18d659a1b
+        - npx cypress install
+        - npx cypress run test --record --key 207ca353-1e88-4962-ae60-a7d18d659a1b
     postTest:
       commands:
-        - pm2 kill
+        - npx pm2 kill
