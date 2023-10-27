@@ -19,7 +19,6 @@ test:
   phases:
     preTest:
       commands:
-        - yarn install
         - yarn global add cypress
         - yarn global add wait-on
         - yarn global add pm2
