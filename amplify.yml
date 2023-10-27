@@ -20,14 +20,14 @@ test:
     preTest:
       commands:
         - yarn install
+        - yarn global add cypress
         - yarn global add wait-on
         - yarn global add pm2
-        - yarn global add mocha mochawesome mochawesome-merge mochawesome-report-generator
+        - yarn global add mocha mochawesome
         - pm2 start npm -- start
         - "wait-on http://localhost:3000"
     test:
       commands:
-        - yarn global add cypress
         - yarn cypress run test --record --key 207ca353-1e88-4962-ae60-a7d18d659a1b
     postTest:
       commands:
