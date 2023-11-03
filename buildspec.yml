@@ -22,3 +22,10 @@ phases:
     commands:
       - docker tag reactapp:latest ${ECR_IMAGE_URI}
       - docker push ${ECR_IMAGE_URI}
+    
+      # Generate image defition files for ecs
+      - printf '[{"name":"reactapp", "imageUri":"%s"}]' ${ECR_IMAGE_URI} > imagedefinitions.json
+
+artifacts:
+  files:
+    - imagedefinitions.json
