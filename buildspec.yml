@@ -14,7 +14,7 @@ phases:
       # ECR login
       - ECR_MAIN_URI="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
       - aws ecr get-login-password --region ${AWS_REGION} | docker login -u AWS --password-stdin ${ECR_MAIN_URI}
-      - ECR_IMAGE_URI="${ECR_MAIN_URI}/${ECR_REPO_NAME}:latest"
+      - ECR_IMAGE_URI="${ECR_MAIN_URI}/${ECR_REPO_NAME}:${CODEBUILD_RESOLVED_SOURCE_VERSION:0:8}"
   build:
     commands:
       - docker build -t reactapp:latest .
@@ -22,7 +22,7 @@ phases:
     commands:
       - docker tag reactapp:latest ${ECR_IMAGE_URI}
       - docker push ${ECR_IMAGE_URI}
-    
+
       # Generate image defition files for ecs
       - printf '[{"name":"reactapp", "imageUri":"%s"}]' ${ECR_IMAGE_URI} > imagedefinitions.json
 
