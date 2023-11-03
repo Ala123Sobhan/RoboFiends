@@ -23,7 +23,9 @@ class App extends Component {
     });
     return (
       <div className="tc">
-        <h1 style={{color:"LightGrey"}}>Hey! Meet My RoboFriends!!</h1>
+        <h1 style={{ color: "LightGrey" }}>
+          Hey! Meet My RoboFriends Version 1.0!!
+        </h1>
         <SearchBox searchChange={this.onSearchChange} />
         <CardList robots={filteredRobots} />;
       </div>
