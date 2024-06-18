@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       settings: {
-        emulatedFormFactor: "desktop",
+        FormFactor: "desktop",
         screenEmulation: {
           mobile: false,
           width: 1200,
