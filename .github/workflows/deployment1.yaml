@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mochawesome-report
-          path: /home/runner/work/RoboFiends/RoboFiends/cypress/reports/html/.jsons/mochawesome.json
+          path: /home/runner/work/RoboFiends/RoboFiends/cypress/reports/html/index.html
 
   deploy:
     needs: test
