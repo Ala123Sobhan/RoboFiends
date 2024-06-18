@@ -1,4 +1,4 @@
-name: Deployment Exercise 1
+name: Deployment Exercise 2
 on: push
 jobs:
   lint:
