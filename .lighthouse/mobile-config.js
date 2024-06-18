@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       settings: {
-        FormFactor: "mobile",
+        formFactor: "mobile",
         onlyCategories: [
           "performance",
           "accessibility",
