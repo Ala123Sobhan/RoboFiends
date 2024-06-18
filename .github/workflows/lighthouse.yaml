@@ -101,6 +101,13 @@ jobs:
           urls: http://ala123ghactions.s3-website-us-east-1.amazonaws.com
           uploadArtifacts: true # save results as an action artifacts
           configPath: .lighthouse/mobile-config.js
+          artifactsPath: .lighthouseci/mobile
+
+      - name: Upload mobile artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-results-mobile
+          path: .lighthouseci/mobile
 
       - name: Audit URLs using Lighthouse (desktop)
         uses: treosh/lighthouse-ci-action@v11
@@ -108,3 +115,10 @@ jobs:
           urls: http://ala123ghactions.s3-website-us-east-1.amazonaws.com
           uploadArtifacts: true # save results as an action artifacts
           configPath: .lighthouse/desktop-config.js
+          artifactsPath: .lighthouseci/desktop
+
+      - name: Upload desktop artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-results-desktop
+          path: .lighthouseci/desktop
