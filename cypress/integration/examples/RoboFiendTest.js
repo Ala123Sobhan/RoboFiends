@@ -2,12 +2,12 @@
 /// <reference types ="cypress-iframe"/>
 import "cypress-iframe";
 
-describe("first test suite", function () {
-  it("My robofiend test case", function () {
+describe("first test suite", function() {
+  it("My robofiend test case", function() {
     cy.visit("http://localhost:3000");
 
-    cy.get("div[class='tc'] h1").then(function (title) {
-      expect(title).to.have.text("Hey! Meet My RoboFriends!!");
+    cy.get("div[class='tc'] h1").then(function(title) {
+      expect(title).to.have.text("Hey! Meet My RoboFriends Version 3.0!!");
     });
 
     cy.get("input[placeholder='search robots']").type("Ervin");
