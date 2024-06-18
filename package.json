@@ -21,7 +21,9 @@
     "headedTest": "npm run test -- --headed",
     "recordDashboardTest": "npm run test -- --record --key 207ca353-1e88-4962-ae60-a7d18d659a1b",
     "mochareportTest": "npm run test -- --reporter mochawesome",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lhci:mobile": "lhci autorun",
+    "lhci:desktop": "lhci autorun --collect.settings.preset=desktop"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@lhci/cli": "^0.13.0",
     "cypress": "^13.3.3",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.6.1",
