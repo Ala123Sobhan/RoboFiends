@@ -33,6 +33,12 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Upload test report artifact
+        if: always() # Ensure this step runs even if tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: mochawesome-report
+          path: /home/runner/work/RoboFiends/RoboFiends/cypress/reports/html/.jsons/mochawesome.json
 
   deploy:
     needs: test
