@@ -15,6 +15,12 @@ jobs:
         run: npm run lint
         continue-on-error: true
 
+      - name: Start the app
+        run: npm start &
+
+      - name: Wait for the app to be ready
+        run: npx wait-on http://localhost:3000 && echo "App is ready"
+
       - name: Test code
         run: npm run test
 
