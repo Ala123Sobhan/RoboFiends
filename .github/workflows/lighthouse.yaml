@@ -93,13 +93,15 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+      - name: Output contents
+        run: ls
       - name: Audit URLs using Lighthouse (mobile)
         uses: treosh/lighthouse-ci-action@v11
         with:
           urls: http://ala123ghactions.s3-website-us-east-1.amazonaws.com
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
-          configPath: /.lighthouse/mobile-config.js
+          configPath: ./.lighthouse/mobile-config.js
 
       - name: Audit URLs using Lighthouse (desktop)
         uses: treosh/lighthouse-ci-action@v11
@@ -107,4 +109,4 @@ jobs:
           urls: http://ala123ghactions.s3-website-us-east-1.amazonaws.com
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
-          configPath: /.lighthouse/desktop-config.js
+          configPath: ./.lighthouse/desktop-config.js
