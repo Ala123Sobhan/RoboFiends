@@ -20,7 +20,8 @@
     "chromeTest": "npm run test -- --browser chrome",
     "headedTest": "npm run test -- --headed",
     "recordDashboardTest": "npm run test -- --record --key 207ca353-1e88-4962-ae60-a7d18d659a1b",
-    "mochareportTest": "npm run test -- --reporter mochawesome"
+    "mochareportTest": "npm run test -- --reporter mochawesome",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +42,7 @@
     "cypress": "^13.3.3",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.6.1",
+    "eslint": "^8.57.0",
     "mocha": "^10.2.0",
     "neat-csv": "^5.1.0"
   }
