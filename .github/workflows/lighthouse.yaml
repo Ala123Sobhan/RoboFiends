@@ -109,5 +109,5 @@ jobs:
           urls: http://ala123ghactions.s3-website-us-east-1.amazonaws.com
           uploadArtifacts: true # save results as an action artifacts
           configPath: .lighthouse/desktop-config.js
-          artifactsName: lighthouse-desktop-result
+          artifactName: lighthouse-desktop-result
           temporaryPublicStorage: true
