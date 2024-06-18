@@ -16,6 +16,7 @@ jobs:
         continue-on-error: true
 
   test:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -30,6 +31,7 @@ jobs:
           browser: chrome
 
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
