@@ -32,6 +32,3 @@ test:
         - pm2 kill
   artifacts:
     baseDirectory: cypress/mochawesome-report
-    files:
-      - "**/*.html"
-      # - "**/*.json"
