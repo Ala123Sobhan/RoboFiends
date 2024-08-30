@@ -31,6 +31,8 @@ test:
       commands:
         - pm2 kill
   artifacts:
-    baseDirectory: cypress/mochawesome-report
+    baseDirectory: cypress
+    configFilePath: "**/mochawesome.json"
     files:
-      - "**/*.html"
+      - "**/*.png"
+      - "**/*.mp4"
