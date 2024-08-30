@@ -9,7 +9,8 @@ module.exports = defineConfig({
     reportPageTitle: "CYPRESS-TESTS",
     embeddedScreenshots: true,
     inlineAssets: true,
-    reportDir: "../mochawesome-report",
+    reportDir: "cypress/mochawesome-report",
+    json: true,
   },
   env: {
     url: "https://rahulshettyacademy.com",

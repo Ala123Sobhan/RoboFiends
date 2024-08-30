@@ -8,7 +8,6 @@ frontend:
       commands:
         - yarn run build
   artifacts:
-    # IMPORTANT - Please verify your build output directory
     baseDirectory: build
     files:
       - "**/*"
@@ -27,14 +26,11 @@ test:
         - wait-on http://localhost:3000
     test:
       commands:
-        - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=../mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
+        - 'npx cypress run --reporter mochawesome --reporter-options "reportDir=cypress/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"'
     postTest:
       commands:
-        - npx mochawesome-merge ../mochawesome-report/*.json > ../mochawesome.json
         - pm2 kill
   artifacts:
-    baseDirectory: cypress
-    configFilePath: "**/mochawesome.json"
+    baseDirectory: cypress/mochawesome-report
     files:
-      - "**/*.png"
-      - "**/*.mp4"
+      - "**/*.html"
