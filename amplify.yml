@@ -30,7 +30,7 @@ test:
     postTest:
       commands:
         - pm2 kill
-  artifacts:
-    baseDirectory: "**/cypress/mochawesome-report"
-    files:
-      - "index.html"
+  # artifacts:
+  #   baseDirectory: cypress/mochawesome-report"
+  #   files:
+  #     - "index.html"
