@@ -31,6 +31,6 @@ test:
       commands:
         - pm2 kill
   artifacts:
-    baseDirectory: "**/RoboFiends/cypress/mochawesome-report"
+    baseDirectory: "**/cypress/mochawesome-report"
     files:
       - "index.html"
