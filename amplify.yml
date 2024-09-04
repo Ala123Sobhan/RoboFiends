@@ -17,8 +17,8 @@ frontend:
 test:
   artifacts:
     baseDirectory: cypress
-    configFilePath: "**/index.html"
     files:
+      - mochawesome-report/*.html
       - "**/*.png"
       - "**/*.mp4"
   phases:
