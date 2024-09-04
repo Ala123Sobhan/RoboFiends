@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-09-04T05:02:28.043Z",
+    "end": "2024-09-04T05:02:30.091Z",
+    "duration": 2048,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e01b70ed-98db-4ffc-b2b5-31ea141b694c",
+      "title": "",
+      "fullFile": "cypress\\integration\\examples\\RoboFiendTest.js",
+      "file": "cypress\\integration\\examples\\RoboFiendTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c132d555-48ae-467f-8c43-985db59066fc",
+          "title": "first test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My robofiend test case",
+              "fullTitle": "first test suite My robofiend test case",
+              "timedOut": null,
+              "duration": 819,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\");\ncy.get(\"div[class='tc'] h1\").then(function (title) {\n  expect(title).to.have.text(\"Hey! Meet My RoboFriends!!\");\n});\ncy.get(\"input[placeholder='search robots']\").type(\"Ervin\");\ncy.get(\".bg-light-blue\").should(\"have.length\", 1);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:3000/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:3000\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:58100/__cypress/runner/cypress_runner.js:131213:74)\n    at visitFailedByErr (http://localhost:58100/__cypress/runner/cypress_runner.js:130605:12)\n    at <unknown> (http://localhost:58100/__cypress/runner/cypress_runner.js:131212:11)\n    at tryCatcher (http://localhost:58100/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:58100/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:58100/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:58100/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:58100/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:58100/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:58100/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:58100/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:58100/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://robofriends/./cypress/integration/examples/RoboFiendTest.js:7:7)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:3000\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)",
+                "diff": null
+              },
+              "uuid": "449563eb-75b3-4517-89ba-76ddcae96594",
+              "parentUUID": "c132d555-48ae-467f-8c43-985db59066fc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "449563eb-75b3-4517-89ba-76ddcae96594"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 819,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "CYPRESS-TESTS",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "reportDir": "./cypress/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

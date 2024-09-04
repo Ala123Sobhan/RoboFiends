@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   projectId: "2couyw",
   defaultCommandTimeout: 8000,
-  reporter: "cypress-mochawesome-reporter",
+  reporter: "mochawesome",
   reporterOptions: {
     charts: true,
     reportPageTitle: "CYPRESS-TESTS",
@@ -23,7 +23,7 @@ module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
-      require("cypress-mochawesome-reporter/plugin")(on);
+      //require("cypress-mochawesome-reporter/plugin")(on);
     },
 
     specPattern: "cypress/integration/examples/RoboFiendTest.js",
