@@ -19,6 +19,7 @@ test:
     baseDirectory: cypress
     configFilePath: "**/mochawesome.json"
     files:
+      - "**/*.json"
       - "**/*.html"
       - "**/*.png"
       - "**/*.mp4"
