@@ -20,7 +20,6 @@ test:
     configFilePath: "**/mochawesome.json"
     files:
       - "**/*.html"
-      - "**/mochawesome-report/.jsons/*.json"
       - "**/*.png"
       - "**/*.mp4"
   phases:
@@ -39,5 +38,5 @@ test:
         # - npx cypress run test --record --key 207ca353-1e88-4962-ae60-a7d18d659a1b
     postTest:
       commands:
-        - npx mochawesome-merge cypress/report/mochawesome-report/mochawesome*.json > cypress/report/mochawesome.json
+        - npx mochawesome-merge cypress/mochawesome-report/mochawesome*.json > cypress/mochawesome.json
         - npx pm2 kill
