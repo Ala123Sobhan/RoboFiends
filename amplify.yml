@@ -17,7 +17,7 @@ frontend:
 test:
   artifacts:
     baseDirectory: cypress
-    configFilePath: "**/mochawesome.json"
+    configFilePath: "**/mochawesome*.json"
     files:
       - "**/*.html"
       - "**/*.png"
@@ -38,5 +38,4 @@ test:
         # - npx cypress run test --record --key 207ca353-1e88-4962-ae60-a7d18d659a1b
     postTest:
       commands:
-        - npx mochawesome-merge cypress/mochawesome-report/mochawesome*.json > cypress/mochawesome.json
         - npx pm2 kill
