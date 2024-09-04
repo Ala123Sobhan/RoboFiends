@@ -18,7 +18,8 @@ test:
   artifacts:
     baseDirectory: cypress
     files:
-      - mochawesome-report/*.html
+      - "**/*.html"
+      - "**/*.json"
       - "**/*.png"
       - "**/*.mp4"
   phases:
