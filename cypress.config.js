@@ -11,7 +11,7 @@ module.exports = defineConfig({
     inlineAssets: true,
     reportDir: "./cypress/mochawesome-report",
     overwrite: false,
-    html: true,
+    html: false,
     json: true, // This is crucial for generating JSON reports
   },
   env: {
