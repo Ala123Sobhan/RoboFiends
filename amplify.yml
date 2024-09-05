@@ -20,6 +20,7 @@ test:
       commands:
         - yarn global add wait-on
         - yarn global add pm2
+        - export PATH="$(yarn global bin):$PATH"
         - yarn global add mocha mochawesome mochawesome-merge mochawesome-report-generator
         - pm2 start npm -- start
         - "wait-on http://localhost:8000"
