@@ -21,16 +21,14 @@ test:
         - yarn global add wait-on
         - yarn global add pm2
         - export PATH="$(yarn global bin):$PATH"
-        - yarn global add mocha mochawesome mochawesome-merge mochawesome-report-generator
+        - yarn global add mocha mochawesome
         - pm2 start npm -- start
         - "wait-on http://localhost:8000"
     test:
       commands:
         - yarn cypress run
-        - yarn cypress run --reporter mochawesome --reporter-options "reportDir=cypress/mochawesome-report,overwrite=false,html=false,json=true,timestamp=mmddyyyy_HHMMss"
     postTest:
       commands:
-        - yarn run --silent mochawesome-merge cypress/mochawesome-report/mochawesome*.json > cypress/mochawesome.json
         - pm2 kill
   artifacts:
     baseDirectory: cypress
